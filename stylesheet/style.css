@@ -1,0 +1,344 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #ff9800;
+    color: white;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Cart enhance */
+header .cart {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+header .cart img {
+    width: 24px;
+}
+
+.cart-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* .cart-modal .modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+} */
+
+.cart-modal .modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    max-height: 80vh; /* Limits the modal height to 80% of the viewport height */
+    overflow-y: auto; /* Adds vertical scrolling if content exceeds the max height */
+}
+
+
+.cart-modal .modal-content h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #ff9800;
+}
+
+/* Cart item styles */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+
+.cart-item img {
+    width: 50px;
+    border-radius: 5px;
+}
+
+/* Remove button styles */
+.cart-item button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-item button:hover {
+    background-color: #d32f2f;
+}
+
+/* Cart total styles */
+.cart-total {
+    text-align: right;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.place-order-btn{
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: block;
+    margin-left: auto;   
+}
+
+.place-order-btn:hover{
+    background-color: #e68a00;
+}
+/* Close button styles */
+.close-btn {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: block;
+    margin-left: auto;
+}
+
+.close-btn:hover {
+    background-color: #e68a00;
+}
+
+/* Hero section styles */
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: url('images/bk3.jpg') no-repeat center/cover; /* Set initial background */
+    color: #e0e0e0;
+    text-shadow: rgba(0, 0, 0, 0.7);
+    transition: background-image 1.5s ease-in-out, opacity 1.5s ease-in-out, transform 1.5s ease-in-out; /* Added transform transition */
+    opacity: 1; /* Ensure opacity starts at 1 */
+    transform: scale(1); /* Initial scale */
+}
+
+.hero.zoom-out {
+    transform: scale(1.1); /* Zoom out effect */
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #ff9800;
+    color: grey;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.hero .btn:hover {
+    background-color: #e68a00; /* Darker shade on hover */
+}
+
+/* Arrow styles */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.arrow-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    left: 0;
+}
+
+.arrow-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    right: 0;
+}
+
+/* Products section styles */
+/* Add box-sizing globally */
+
+
+body {
+    font-family: 'Arial', sans-serif; /* Adding a simple font */
+}
+
+/* Container for the products */
+#products {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Product grid layout */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Product card styling */
+.product-card {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: space-between; /* Space out elements to use the full height */
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s; /* Add box-shadow transition */
+    background-color: #fff; /* Ensure a white background for consistency */
+    cursor: pointer;
+    min-height: 300px; /* Ensures all cards have at least this height */
+}
+
+/* Image styling */
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s; /* Smooth image transition on hover */
+}
+
+/* Product name */
+.product-card h3 {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    flex-grow: 1; /* Allow the title to take up available space */
+    display: flex;
+    justify-content: center; /* Center text vertically if needed */
+}
+
+/* Price styling */
+.product-card p {
+    color: #ff9800;
+    font-weight: bold;
+}
+
+/* Button styling */
+.product-card button {
+    padding: 0.5rem 1rem;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: auto; /* Push the button to the bottom of the card */
+}
+
+/* Button hover state */
+.product-card button:hover {
+    background-color: #e68a00;
+}
+
+/* Product card hover state */
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for hover effect */
+}
+
+/* Image hover zoom effect */
+.product-card img:hover {
+    transform: scale(1.05); /* Slight zoom effect for images */
+}
+
+/* Button focus state for accessibility */
+.product-card button:focus {
+    outline: 2px solid #ff9800; /* Add a focus outline for better visibility */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust grid layout for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card h3 {
+        font-size: 1rem; /* Reduce the font size for smaller screens */
+    }
+    .product-card p {
+        font-size: 1rem; /* Adjust price size on mobile */
+    }
+}
+
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    margin-top: 2rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .product-card {
+        padding: 0.5rem;
+    }
+}

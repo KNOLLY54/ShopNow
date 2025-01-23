@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopNow - Your Online Store</title>
+    <link rel="stylesheet" href="./stylesheet/style.css">
+</head>
+<body>
+    
+<style>
+    html{
+        scroll-behavior: smooth;
+
+    }
+</style>
+
+    <header>
+        <div class="logo">ShopNow</div>
+        <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about" id="about-link">About</a></li>
+            
+        </ul>
+        </nav>
+        <div class="cart" onclick="toggleCartModal()">
+            <img src="./images/cart.png" alt="Cart">
+            <span id="cart-count">0</span>
+         
+        </div>
+    </header>
+    <section id="home" class="hero">
+        <h1>Welcome to Shopnow</h1>
+        <h3>Find the best products at unbeatable prices</h3>
+        <a href="#products" class="btn">Shop Now</a>
+        <div class="arrow-left" onclick="changeImage(-1)">&#10094;</div>
+        <div class="arrow-right" onclick="changeImage(1)">&#10095;</div>
+    </section>
+
+    <section id="products">
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="product-grid" id="product-grid">
+            <!-- Products will be loaded here dynamically -->
+        </div>
+        <div class="cart-modal" id="cart-modal">
+            <div class="modal-content">
+                <h2>Your Cart</h2>
+                <div id="cart-items"></div>
+                <p class="cart-total" id="cart-total">Total: $0</p>
+                <button class="place-order-btn" onclick="placeOrder()">Place Order</button>
+                <button class="close-btn" onclick="toggleCartModal()">Close</button>
+                
+            </div>
+        </div>
+    
+    </section>
+
+    <!-- About Section -->
+<section id="about" style="padding: 2rem; background-color: #f9f9f9; text-align: center;">
+    <h2 style="font-size: 2rem; color: #ff9800; margin-bottom: 1rem;">About Us</h2>
+    <p style="font-size: 1.2rem; color: #555; max-width: 800px; margin: 0 auto; line-height: 1.6;">
+        Welcome to ShopNow! We are your go-to online store offering a wide variety of electronics, and home appliances. 
+        Our mission is to provide top-quality products at unbeatable prices while delivering an exceptional shopping experience. 
+        At ShopNow, customer satisfaction is our priority, and we strive to meet your every need.
+    </p>
+    <img src="images/about.jpg" alt="About Us" style="width: 100%; max-width: 600px; margin-top: 2rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+</section>
+
+
+    <footer>
+        <p>© 2025 ShopNow. All rights reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+   
+   
+</body>
+</html>
